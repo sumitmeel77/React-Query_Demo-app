@@ -6,6 +6,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 import Home from './component/Home';
 
 const queryClient = new QueryClient()
@@ -15,6 +16,7 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <Home />
+        <ReactQueryDevtools initialIsOpen={true} />
       </QueryClientProvider>
     </>
   );
